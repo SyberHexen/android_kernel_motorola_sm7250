@@ -78,3 +78,5 @@ obj-$(CONFIG_QTI_XR_SMRTVWR_MISC) += qxr-stdalonevwr.o
 obj-$(CONFIG_FPR_FPC)		+= fpr_FingerprintCard/
 obj-y                           += qrc/
 obj-$(CONFIG_INPUT_AWINIC_HAPTIC) += awinic/
+obj-$(CONFIG_MMI_SIGPRINT) += mmi_sigprint/
+obj-$(CONFIG_MMI_SYS_TEMP) += mmi_sys_temp/
