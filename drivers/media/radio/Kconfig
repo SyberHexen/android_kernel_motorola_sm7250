@@ -541,3 +541,8 @@ config RADIO_IRIS_TRANSPORT
 
           To compile this driver as a module, choose M here: the
           module will be called radio-iris-transport.
+
+config RADIO_ELNA
+	tristate "ELNA FM Radio"
+	help
+	Choose Y here if you have this FM radio chip.
