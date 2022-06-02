@@ -58,10 +58,22 @@ qcom,mdss-brightness-max-level = <2047>;
 qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 
 qcom,mdss-dsi-hbm-on-command = [
-		39 01 00 00 00 00 03 51 0F FF];
+		// ELVSS DIM OFF & DLY OFF
+		39 01 00 00 00 00 03 F0 5A 5A
+		39 01 00 00 00 00 03 B0 91 63
+		15 01 00 00 00 00 02 63 20
+		39 01 00 00 00 00 03 F0 A5 A5
+		// HBM ON
+		15 01 00 00 00 00 02 53 E0
+		39 01 00 00 00 00 03 51 07 1C];
 qcom,mdss-dsi-hbm-off-command = [
-		39 01 00 00 00 00 03 51 07 FF];
-
+		// HBM OFF
+		15 01 00 00 00 00 02 53 20
+		// ELVSS DIM ON & DLY ON
+		39 01 00 00 00 00 03 F0 5A 5A
+		39 01 00 00 00 00 03 B0 91 63
+		15 01 00 00 00 00 02 63 50
+		39 01 00 00 00 00 03 F0 A5 A5];
 qcom,mdss-dsi-acl-on-command = [
 		39 01 00 00 00 00 06 F0 55 AA 52 08 00
 		15 01 00 00 00 00 02 B0 0C
